@@ -13,6 +13,8 @@ public class DieTester {
     //runs the game
     public void playGame()
     {
+        DieTesterViewer DTV = new DieTesterViewer(this);
+        DTV.repaint();
         Scanner scanner = new Scanner(System.in);
         Die d1 = new Die();
         printInstructions();
@@ -33,9 +35,13 @@ public class DieTester {
             int num = scanner.nextInt();
             System.out.println("Your move is:");
             System.out.println(d1.getMove(num));
+            DTV.setMove(num);
+            DTV.Move(DTV.getGraphics());
             System.out.println("Their move is:");
             int num1 = d2.roll();
             System.out.println(d2.getMove(num1));
+            DTV.setCompmove(num1);
+            DTV.Move(DTV.getGraphics());
             String winners = getWinner(num, num1);
             score = d1.getScore(num,num1);
             score2 = d2.getScore1(num,num1);
