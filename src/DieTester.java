@@ -39,7 +39,6 @@ public class DieTester {
             System.out.println();
             round = "Round: " + i;
             DTV.round(DTV.getGraphics(),round);
-            DTV.round(DTV.getGraphics(),round);
             System.out.println("Round: " + i);
             System.out.println("Pick your move: ");
             int num = scanner.nextInt();
@@ -64,7 +63,6 @@ public class DieTester {
             System.out.println("Your points :" + overall);
             System.out.println("Cpu's points :" + overall1);
         }
-        DTV.overallwinner(DTV.getGraphics(),this.getOverall(overall,overall1));
         DTV.overallwinner(DTV.getGraphics(),this.getOverall(overall,overall1));
         System.out.println(this.getOverall(overall,overall1));
     }
