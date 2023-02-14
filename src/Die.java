@@ -1,3 +1,5 @@
+//Elijah Chandler
+//2/13/23
 public class Die {
     /** Instance Variables **/
     private int sides;
@@ -9,18 +11,15 @@ public class Die {
     {
         sides = 3;
     }
-
     public Die(int numSides)
     {
         sides = numSides;
     }
-
     /** Methods **/
     public int getSides()
     {
         return sides;
     }
-
     /**
      * Returns a random int between 1 and
      * the number of sides on the Die
@@ -30,7 +29,6 @@ public class Die {
         int num = (int)(Math.random()*sides)+ 1;
         return num;
     }
-
     /**
      * Rolls the dice the numRolls times
      * and returns the max value of the rolls
@@ -43,10 +41,8 @@ public class Die {
             int num = roll();
             max = Math.max(max, num);
         }
-
         return max;
     }
-
     /**
      * TODO: Write a method that rolls the
      * die numRolls times and returns the
@@ -71,7 +67,6 @@ public class Die {
         }
         return Move;
     }
-
     //Increases the score for the player if the win
     public int getScore(int num, int num1)
     {
@@ -94,7 +89,6 @@ public class Die {
         }
         return scores;
     }
-
     //Increases the score for the cpu if they win
     public int getScore1(int num,int num1)
     {
@@ -117,5 +111,4 @@ public class Die {
         }
         return scores1;
     }
-
 }
